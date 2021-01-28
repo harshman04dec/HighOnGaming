@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">          
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <title>High on gaming</title>
+</head>
+<body class="login">
+    <%- include("partials/navbar") -%>
+
+<form action="/registration" method="post">
+<div class="registration-box">
+    <h1>Registration</h1>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="teamname" placeholder="Team name">
+      </div> 
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="text" name="ign" placeholder="In game name">
+    </div>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="mobile_number" placeholder="Mobile number">
+      </div>
+    <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="email" placeholder="E-mail">
+      </div>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="ign2" placeholder="2nd player IGN">
+      </div>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="ign3" placeholder="3rd player IGN">
+      </div>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" name="ign4" placeholder="4th player IGN">
+      </div>
+
+    <input type="submit" class="btns" value="Sign in">
+  </div>
+</form>
+
+<!-- <section class="get-in-touch">
+  <h1 class="title">Registration</h1>
+  <form class="contact-form row" action="/registration" method="post">
+     <div class="form-field col-lg-6">
+        <input id="name" class="input-text js-input" name="teamname" type="text" required>
+        <label class="label" for="name">Team Name</label>
+     </div>
+     <div class="form-field col-lg-6 ">
+      <input id="company" class="input-text js-input" name="ign" type="text" required>
+      <label class="label" for="company">In game name</label>
+   </div>
+   <div class="form-field col-lg-6 ">
+    <input id="phone" class="input-text js-input" name="mobile_number" type="text" required>
+    <label class="label" for="phone">Contact Number</label>
+ </div>
+     <div class="form-field col-lg-6 ">
+        <input id="email" class="input-text js-input" name="email" type="email" required>
+        <label class="label" for="email">E-mail</label>
+     </div>
+     <div class="form-field col-lg-6 ">
+        <input id="company" class="input-text js-input" name="ign2" type="text" required>
+        <label class="label" for="company">2 player IGN</label>
+     </div>
+     <div class="form-field col-lg-6 ">
+      <input id="company" class="input-text js-input" name="ign3" type="text" required>
+      <label class="label" for="company">3 player IGN</label>
+   </div>
+   <div class="form-field col-lg-6 ">
+    <input id="company" class="input-text js-input" name="ign4" type="text" required>
+    <label class="label" for="company">4 player IGN</label>
+ </div> -->
+
+
+     <div class="form-field col-lg-12">
+        <input class="submit-btn" type="submit" value="Submit">
+     </div>
+  </form>
+</section>
+
+                      
+
+<%- include("partials/footer") -%>
