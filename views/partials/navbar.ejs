@@ -16,13 +16,26 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto"style="color: azure">
+        
+        
+        <% if (!currentUser) { %>
         <li class="nav-item">
-            <a class="nav-link lol" href="#"style="color: azure">About</a>
+            <a class="nav-link lol" href="/register"style="color: azure">   Sign-in</a>
           </li>  
         <li class="nav-item">
             <a class="nav-link lol" href="/login"style="color: azure">Login</a>
           </li>
+          <% } else { %>
+           
+            <li class="nav-item">
+              <a class="nav-link " href="/logout"style="color: azure">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lol1" style="color: azure">Signed in as <%= currentUser.username %></a>
+            </li>
+            <% } %>
       </ul>
  
     </div>
   </nav>
+  <%= message %>
