@@ -18,14 +18,15 @@
     <tbody>
     <%matchdetails.forEach( function(matchdetail){%>  
         <tr>
-          
+          <% 
+          var getTheDate = (matchdetail.date + "") %> 
         <td scope="row"><%=i%></td>
         <td ><%=matchdetail.name%></td>
         <td><%=matchdetail.number%></td>
-        <td><%=matchdetail.date%></td>
+        <td><%= getTheDate.substring(15,21)+ "  "+getTheDate.substring(0,3)+" , "+ getTheDate.substring(3,10)%></td>
         <td><%=matchdetail.prizepool%></td>
         
-        <td><a type="button" class="btn btn-dark" href="/tournament/<%= matchdetail.name.substring(0,12) %>">Apply</a>                <a type="button" class="btn btn-dark" href="/tournament/list/<%= matchdetail.name %>">Regsitered teams</a></td>
+        <td><a type="button" class="btn btn-dark chipke" href="/tournament/<%= matchdetail.name.substring(0,12) %>">Apply</a>                <a type="button" class="btn btn-dark chipke" href="/tournament/list/<%= matchdetail.name %>">Regsitered teams</a></td>
       
       </tr>
       <% i = i+1; %>
