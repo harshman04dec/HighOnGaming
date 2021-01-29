@@ -11,7 +11,7 @@ const { application } = require("express");
 const app = express();
 
 app.use(function(req,res,next){
-    res.locals.message = "error";
+    res.locals.message = "";
     next();
     });
 app.set('view engine', 'ejs');
@@ -92,7 +92,9 @@ function isLoggedIn(req,res,next){
     if (req.isAuthenticated()){
         return next();
     }
-    res.redirect("/login");
+    res.redirect("/login",{
+      message : "Please login"
+    });
 }
 
 app.get("/", function(req,res){

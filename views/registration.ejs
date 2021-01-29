@@ -1,11 +1,11 @@
 <%- include("partials/header") -%>
     <%- include("partials/navbar") -%>
     <% const tourney = matchdetail.name; %>
-
+    <div class="flex-container">
 <form action="/tournament/<%= matchdetail.name %>" method="post">
-<div class="registration-box">
+<div class="registration-table ">
     <h1>Registration for <%= matchdetail.name %></h1>
-    <div class="textbox">
+    <div class="textbox top">
         <i class="fas fa-user"></i>
         <input type="text" name="teamname" placeholder="Team name">
       </div> 
@@ -33,15 +33,23 @@
         <i class="fas fa-user"></i>
         <input type="text" name="ign4" placeholder="4th player IGN">
       </div>
-      <div class="textbox">
+      <div class="textbox bottom">
         <i class="fas fa-user"></i>
         <input type="text" name="hostname" value="<%= matchdetail.name %>">
       </div>
          
-    <input type="submit" class="btns" value="Apply">
+    <input type="submit" class="btns top bottom" value="Apply">
   </div>
 </form>
-
+<div class="registration-description">
+  <h1><%= matchdetail.name %> </h1>
+  <p class="para limit"><%=matchdetail.description%></p> 
+  <p class="para"><% if(matchdetail.prizepool!="0"){ %></p>  
+  <p class="para-prizepool">Prize pool is <%= matchdetail.prizepool %> Rs </p>
+  <% } %> 
+  
+</div>
+</div>
 <!-- <section class="get-in-touch">
   <h1 class="title">Registration</h1>
   <form class="contact-form row" action="/registration" method="post">

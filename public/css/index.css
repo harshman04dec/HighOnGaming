@@ -1,3 +1,101 @@
+.flex-container {
+  display: flex;
+  flex: 2 1 auto;
+  flex-wrap: nowrap;
+  
+}
+
+.flex-container > div {
+  
+  width: 50%;
+  
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.para {
+  font-size: medium;
+  color:rgb(255, 250, 204,0.7);
+  line-height: 30px;
+}
+.para-prizepool {
+  font-size: medium;
+  color:rgb(255, 250, 204);
+  line-height: 30px;
+}
+.tournament-table{
+  text-align: center;
+  border-top: 0ex;
+  background-color: rgba(139, 2, 207, 0.171);
+  max-width: 1400px;
+  position: relative;
+    z-index: 2;
+    width: 1030px ;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+.limit {
+  
+  margin: 15px;
+  padding-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media only screen and (max-width:1030px) {
+  
+  .tournament-table, .tournament-description {
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+
+}
+
+.registration-table{
+  text-align: center;
+  border-top: 0ex;
+  background-color: rgba(139, 2, 207, 0.171);
+  max-width: 1400px;
+  position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 20px;
+
+    
+    box-sizing: border-box;
+}
+.registration-description {
+  text-align: center;
+  border-top: 0ex;
+  background-color: rgba(139, 2, 207, 0.171);
+  max-width: 1400px;
+  position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 30px;
+
+
+    box-sizing: border-box;
+
+}
+@media only screen and (max-width:1030px) {
+  
+  .registration-table, .registration-description {
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .flex-container {
+    display: block;
+    flex-wrap: nowrap;
+    
+  }
+}
 
 .chipke{
   margin: 10px;
@@ -10,10 +108,13 @@
     margin-top: 30px;
 }
 h1{
+  margin: 30px;
+  
   color: rgb(255, 255, 255);
 }
 p {
     color: #ffffff;
+    font-size: 18px;
 }
 td {
     color: white;
@@ -84,7 +185,7 @@ tr {
     align-items: center;
   }
   .login-box{
-    padding-top: 50ex;
+    margin-top: 40ex;
     width: 280px;
     position: relative;
     top: 50%;
@@ -92,9 +193,17 @@ tr {
     transform: translate(-50%,-50%);
     color: white;
   }
+  .top{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .bottom {
+    border-bottom-left-radius: 10px ;
+    border-bottom-left-radius: 10px ;
+  }
   .registration-box{
     
-    padding-top: 90ex;
+    margin-top: 40ex;
     width: 50%;
     position: relative;
     top: 50%;
@@ -104,7 +213,7 @@ tr {
   }
   .host-box{
     
-    padding-top: 90ex;
+    margin-top: 40ex;
     width: 50%;
     position: relative;
     top: 50%;
@@ -123,9 +232,8 @@ tr {
   .textbox{
     width: 100%;
     overflow: hidden;
-    font-size: 20px;
-    padding: 8px 5px;
-    margin: 8px 0;
+    font-size: 30px;
+    height: 50px;
     border-top: 1px solid rgb(139, 2, 207);
     border-left: 1px solid rgb(139, 2, 207);
     border-right: 1px solid rgb(139, 2, 207);
