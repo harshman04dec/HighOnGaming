@@ -41,7 +41,7 @@
     <input type="submit" class=" textbox btns top bottom " value="Apply">
   </div>
 </form>
-<div class="registration-description">
+<div class="width registration-description" style="width: auto;">
   <h1><%= matchdetail.name %> </h1>
   <% var ytembed = matchdetail.ytlink;
      ytembed = ytembed.replace("watch", "embed");  %> 
@@ -52,12 +52,12 @@
   <% } %> 
 
 
-  <p class="para limit"><%=matchdetail.description%></p> 
+  <p class="para limit" style="text-align: left;"><%=matchdetail.description%></p> 
   <p class="para"><% if(matchdetail.prizepool!="0"){ %></p>  
   <p class="para-prizepool">Prize pool is <%= matchdetail.prizepool %> Rs </p>
   <% } %> 
   <p class="para"><% if(matchdetail.walink!=""){ %></p>  
-    <a class="btn btn-primary" href="<%=matchdetail.walink%>" role="button" >Whatsapp</a>
+    <a class="btn btn-outline-success" href="<%=matchdetail.walink%>" role="button" >Whatsapp</a>
     <% } %> 
   
 </div>

@@ -1,3 +1,7 @@
+.btn-outline-success {
+  color: #e9ecef;
+  border-color: #f8f8f8;
+}
 .flex-container {
   display: flex;
   flex: 2 1 auto;
@@ -88,10 +92,14 @@
   
   .registration-table, .registration-description {
     width:90%;
-    padding-right: 30px;
+    padding-right: 0px;
 
   }
+  .registration-description{
+    margin-right: 4%;
+  }
   .flex-container {
+    flex: auto;
     display: block;
     flex-wrap: nowrap;
     
