@@ -33,6 +33,7 @@ app.use(session({
   app.use(passport.session());
 //const URL = mongodb+srv:harshman:<password>@cluster0.kpnay.mongodb.net/<dbname>?retryWrites=true&w=majority;
 mongoose.connect("mongodb+srv://harshman:hog@cluster0.gwha9.mongodb.net/registration?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true  });
+// mongoose.connect("mongodb://localhost:27017/RegistrationDB",{ useUnifiedTopology: true, useNewUrlParser: true  });
 mongoose.set("useCreateIndex",true);
 const matchdetails = [];
 const details = [];
@@ -107,7 +108,8 @@ app.get("/tournament/:name",function(req,res){
       if(!err){
           
           tourneys.forEach(function(tourney){
-              const storedName = _.lowerCase(tourney.name);
+              var storedName = _.lowerCase(tourney.name);
+              storedName = storedName.substring(0,12);
               if(storedName===requestedName){
                   res.render("registration",{
                     currentUser : req.user,
@@ -115,6 +117,10 @@ app.get("/tournament/:name",function(req,res){
                   })
                   //console.log(storedName+" success "+requestedName);
 
+              }
+              else {
+                console.log(err);
+                console.log(storedName+"!="+requestedName);
               }
               
           })
@@ -291,6 +297,6 @@ alert.close()
 // });
 
 
-app.listen(process.env.PORT, function(){
+app.listen(process.env.PORT||3000, function(){
     console.log("M416 goes brrrrrr");
 })
