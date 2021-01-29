@@ -32,8 +32,8 @@ app.use(session({
   app.use(passport.initialize());
   app.use(passport.session());
 //const URL = mongodb+srv:harshman:<password>@cluster0.kpnay.mongodb.net/<dbname>?retryWrites=true&w=majority;
-// mongoose.connect("mongodb+srv://harshman:hog@cluster0.gwha9.mongodb.net/registration?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true  });
- mongoose.connect("mongodb://localhost:27017/RegistrationDB",{ useUnifiedTopology: true, useNewUrlParser: true  });
+ mongoose.connect("mongodb+srv://harshman:hog@cluster0.gwha9.mongodb.net/registration?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true  });
+//  mongoose.connect("mongodb://localhost:27017/RegistrationDB",{ useUnifiedTopology: true, useNewUrlParser: true  });
 mongoose.set("useCreateIndex",true);
 const matchdetails = [];
 const details = [];
