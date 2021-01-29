@@ -32,8 +32,8 @@ app.use(session({
   app.use(passport.initialize());
   app.use(passport.session());
 //const URL = mongodb+srv:harshman:<password>@cluster0.kpnay.mongodb.net/<dbname>?retryWrites=true&w=majority;
-mongoose.connect("mongodb+srv://harshman:hog@cluster0.gwha9.mongodb.net/registration?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true  });
-// mongoose.connect("mongodb://localhost:27017/RegistrationDB",{ useUnifiedTopology: true, useNewUrlParser: true  });
+// mongoose.connect("mongodb+srv://harshman:hog@cluster0.gwha9.mongodb.net/registration?retryWrites=true&w=majority",{ useUnifiedTopology: true, useNewUrlParser: true  });
+ mongoose.connect("mongodb://localhost:27017/RegistrationDB",{ useUnifiedTopology: true, useNewUrlParser: true  });
 mongoose.set("useCreateIndex",true);
 const matchdetails = [];
 const details = [];
@@ -73,7 +73,9 @@ const hostSchema ={
     number : Number,
     date : Date,
     description : String,
-    prizepool : Number
+    prizepool : Number,
+    ytlink : String,
+    walink: String
 
 }
 const Hosting = mongoose.model(
@@ -209,7 +211,9 @@ app.get("/host", function(req,res){
             number : req.body.number,
             date : req.body.date,
             description : req.body.description,
-            prizepool : req.body.prizepool
+            prizepool : req.body.prizepool,
+            ytlink :req.body.youtubelink,
+            walink : req.body.whatsapplink
         });
         // console.log(matchdetail.name);
         matchdetail.save(function(err){

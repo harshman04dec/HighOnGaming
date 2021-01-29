@@ -38,15 +38,27 @@
         <input type="text" name="hostname" value="<%= matchdetail.name %>">
       </div>
          
-    <input type="submit" class="btns top bottom" value="Apply">
+    <input type="submit" class=" textbox btns top bottom " value="Apply">
   </div>
 </form>
 <div class="registration-description">
   <h1><%= matchdetail.name %> </h1>
+  <% var ytembed = matchdetail.ytlink;
+     ytembed = ytembed.replace("watch", "embed");  %> 
+  <% if(matchdetail.ytlink!="" ){ %> 
+    <iframe class="registration-description" width="360" height="315"
+  src="<%= ytembed %> ">
+  </iframe>  
+  <% } %> 
+
+
   <p class="para limit"><%=matchdetail.description%></p> 
   <p class="para"><% if(matchdetail.prizepool!="0"){ %></p>  
   <p class="para-prizepool">Prize pool is <%= matchdetail.prizepool %> Rs </p>
   <% } %> 
+  <p class="para"><% if(matchdetail.walink!=""){ %></p>  
+    <a class="btn btn-primary" href="<%=matchdetail.walink%>" role="button" >Whatsapp</a>
+    <% } %> 
   
 </div>
 </div>
